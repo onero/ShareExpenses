@@ -14,13 +14,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:ems="10"
+        android:ems="5"
         android:id="@+id/incomeA"
-        android:hint="10000"
         android:textAlignment="center"
-        android:layout_alignBaseline="@+id/editText4"
-        android:layout_alignBottom="@+id/editText4"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignBaseline="@+id/txtIncomeA"
+        android:layout_alignBottom="@+id/txtIncomeA"
+        android:layout_toEndOf="@+id/txtIncomeB" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,118 +27,26 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/totalExpense"
-        android:hint="15000"
         android:textAlignment="center"
-        android:layout_below="@+id/editText6"
-        android:layout_alignStart="@+id/editText6" />
+        android:layout_below="@+id/txtTotalExpense"
+        android:layout_alignStart="@+id/txtTotalExpense" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Income A"
+        android:inputType="none|textPersonName"
+        android:text="@string/total_expense"
         android:ems="10"
-        android:layout_marginTop="26dp"
-        android:id="@+id/editText4"
+        android:id="@+id/txtTotalExpense"
         android:textAlignment="center"
-        android:editable="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Income B"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:textAlignment="center"
-        android:editable="false"
-        android:layout_below="@+id/editText4"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/incomeB"
-        android:hint="8000"
-        android:textAlignment="center"
-        android:layout_alignBaseline="@+id/editText"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Total Expense"
-        android:ems="10"
-        android:id="@+id/editText6"
-        android:textAlignment="center"
-        android:editable="false"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/txtIncomeB"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
-        android:focusable="false" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="A should pay: "
-        android:ems="10"
-        android:id="@+id/editText9"
-        android:textAlignment="center"
-        android:editable="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="73dp"
-        android:focusable="false" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="A should pay: "
-        android:ems="10"
-        android:id="@+id/editText8"
-        android:textAlignment="center"
-        android:editable="false"
-        android:layout_above="@+id/editText9"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="40dp"
-        android:focusable="false" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/expenseA"
-        android:textAlignment="center"
-        android:layout_alignBaseline="@+id/editText8"
-        android:layout_alignBottom="@+id/editText8"
-        android:layout_alignParentEnd="true"
-        android:editable="false"
-        android:focusable="false" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/expenseB"
-        android:textAlignment="center"
-        android:layout_alignBaseline="@+id/editText9"
-        android:layout_alignBottom="@+id/editText9"
-        android:layout_alignParentEnd="true"
-        android:editable="false"
-        android:focusable="false" />
+        android:focusable="false"
+        android:textColor="#8b4513" />
 
     <Button
-        android:text="CALCULATE"
+        android:text="@string/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -148,5 +55,98 @@
         android:layout_alignParentStart="true"
         android:background="#51b46d"
         android:textColor="#fff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/income_b"
+        android:ems="5"
+        android:id="@+id/txtIncomeB"
+        android:textAlignment="center"
+        android:textColor="#e15258"
+        android:clickable="false"
+        android:layout_below="@+id/incomeA"
+        android:layout_alignStart="@+id/txtTotalExpense"
+        android:focusable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="5"
+        android:id="@+id/incomeB"
+        android:textAlignment="center"
+        android:layout_below="@+id/incomeA"
+        android:layout_toEndOf="@+id/txtIncomeB"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/incomeA"
+        android:ems="5"
+        android:layout_marginTop="27dp"
+        android:id="@+id/txtIncomeA"
+        android:textAlignment="center"
+        android:textColor="#51b46d"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtIncomeB"
+        android:focusable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/b_should_pay"
+        android:ems="6"
+        android:id="@+id/txtShouldPayB"
+        android:textAlignment="center"
+        android:focusable="false"
+        android:textColor="#e15258"
+        android:layout_below="@+id/expenseA"
+        android:layout_alignStart="@+id/txtShouldPayA" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="5"
+        android:id="@+id/expenseA"
+        android:textAlignment="center"
+        android:layout_alignBaseline="@+id/txtShouldPayA"
+        android:layout_alignBottom="@+id/txtShouldPayA"
+        android:layout_toEndOf="@+id/txtShouldPayA"
+        android:textStyle="bold"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="5"
+        android:id="@+id/expenseB"
+        android:textAlignment="center"
+        android:layout_below="@+id/expenseA"
+        android:layout_toEndOf="@+id/txtShouldPayA"
+        android:textStyle="bold"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/a_should_pay"
+        android:ems="6"
+        android:id="@+id/txtShouldPayA"
+        android:textAlignment="center"
+        android:focusable="false"
+        android:textColor="#51b46d"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/totalExpense"
+        android:layout_toStartOf="@+id/incomeB" />
 
 </RelativeLayout>

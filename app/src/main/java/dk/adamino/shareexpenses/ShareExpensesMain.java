@@ -39,8 +39,8 @@ public class ShareExpensesMain extends AppCompatActivity {
                 mCalculator = new ExpenseCalculator(incomeA, incomeB, totalExpense);
                 String expenseA = mCalculator.getExpenseA();
                 String expenseB = mCalculator.getExpenseB();
-                mExpenseA.setText("" + expenseA + " Kr");
-                mExpenseB.setText("" + expenseB + " Kr");
+                mExpenseA.setText(expenseA);
+                mExpenseB.setText(expenseB);
 
             }
         };

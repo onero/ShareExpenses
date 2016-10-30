@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ShareExpenses</string>
+    <string name="incomeA">Income A:</string>
+    <string name="total_expense">Total Expense</string>
+    <string name="b_should_pay">B should pay:</string>
+    <string name="a_should_pay">A should pay:</string>
+    <string name="income_b">Income B:</string>
+    <string name="calculate">CALCULATE</string>
 </resources>
