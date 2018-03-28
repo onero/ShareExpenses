@@ -7,12 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class ShareExpensesMain extends AppCompatActivity {
 
     private static final String TAG = "Tag";
     private Button mCalculateButton;
     private TextView mIncomeA, mExpenseA, mExpenseB, mIncomeB, mTotalExpense;
-    private ExpenseCalculator mCalculator;
+    private IExpenseCalculator mCalculator;
+    private NumberFormat formatter = new DecimalFormat("#.##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +40,8 @@ public class ShareExpensesMain extends AppCompatActivity {
                     double totalExpense = Double.parseDouble(mTotalExpense.getText().toString());
 
                     mCalculator = new ExpenseCalculator(incomeA, incomeB, totalExpense);
-                    String expenseA = mCalculator.getExpenseA();
-                    String expenseB = mCalculator.getExpenseB();
+                    String expenseA = formatter.format(mCalculator.calculateExpenseA());
+                    String expenseB = formatter.format(mCalculator.calculateExpenseB());
                     mExpenseA.setText(expenseA);
                     mExpenseB.setText(expenseB);
                 } catch (NumberFormatException nfe) {
