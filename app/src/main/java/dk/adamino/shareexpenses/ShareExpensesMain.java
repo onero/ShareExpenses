@@ -43,8 +43,8 @@ public class ShareExpensesMain extends AppCompatActivity {
                     double totalExpense = Double.parseDouble(mTotalExpense.getText().toString());
 
                     mCalculator = new ExpenseCalculator(incomeA, incomeB, totalExpense);
-                    String expenseA = formatter.format(mCalculator.calculateExpenseA());
-                    String expenseB = formatter.format(mCalculator.calculateExpenseB());
+                    String expenseA = formatter.format(mCalculator.calculateExpense(incomeA));
+                    String expenseB = formatter.format(mCalculator.calculateExpense(incomeB));
                     mExpenseA.setText(expenseA);
                     mExpenseB.setText(expenseB);
                 } catch (NumberFormatException nfe) {

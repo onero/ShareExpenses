@@ -6,14 +6,9 @@ package dk.adamino.shareexpenses.BLL;
 public interface IExpenseCalculator {
 
     /***
-     * Calculate Expense A
-     * @return the amount A should pay as a double
+     * Calculate Expense
+     * @param income
+     * @return the amount the person with provided should pay as double
      */
-    double calculateExpenseA();
-
-    /***
-     * Calculate Expense B
-     * @return the amount B should pay as a double
-     */
-    double calculateExpenseB();
+    double calculateExpense(double income);
 }

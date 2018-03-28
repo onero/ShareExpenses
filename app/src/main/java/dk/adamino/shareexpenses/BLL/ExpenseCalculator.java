@@ -24,17 +24,13 @@ public class ExpenseCalculator implements IExpenseCalculator {
     }
 
     @Override
-    public double calculateExpenseA() {
-        double expensePercentageA = (incomeA/totalIncome) * 100;
-        double expenseA = (totalExpense/100) * expensePercentageA;
-        return expenseA;
-
-    }
-
-    @Override
-    public double calculateExpenseB() {
-        double expensePercentageB = (incomeB/totalIncome) * 100;
-        double expenseB = (totalExpense/100) * expensePercentageB;
-        return expenseB;
+    public double calculateExpense(double income) {
+        double expensePercentage = (income/totalIncome) * 100;
+        double expense = (totalExpense/100) * expensePercentage;
+        // Make sure the expense will never surpass the income!
+        if (expense > income) {
+            expense = income;
+        }
+        return expense;
     }
 }
