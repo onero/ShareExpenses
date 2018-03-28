@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fællesudgifter</string>
+    <string name="incomeA">Indkomst A:</string>
+    <string name="income_b">Indkomst B:</string>
+    <string name="total_expense">Totale Udgifter</string>
+    <string name="a_should_pay">A bør betale:</string>
+    <string name="b_should_pay">B bør betale:</string>
+    <string name="calculate">BEREGN</string>
+</resources>
