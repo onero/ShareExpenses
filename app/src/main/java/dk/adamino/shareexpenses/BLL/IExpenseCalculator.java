@@ -1,9 +1,9 @@
-package dk.adamino.shareexpenses;
+package dk.adamino.shareexpenses.BLL;
 
 /**
  * Created by Adamino.
  */
-interface IExpenseCalculator {
+public interface IExpenseCalculator {
 
     /***
      * Calculate Expense A

@@ -10,6 +10,9 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+import dk.adamino.shareexpenses.BLL.ExpenseCalculator;
+import dk.adamino.shareexpenses.BLL.IExpenseCalculator;
+
 public class ShareExpensesMain extends AppCompatActivity {
 
     private static final String TAG = "Tag";

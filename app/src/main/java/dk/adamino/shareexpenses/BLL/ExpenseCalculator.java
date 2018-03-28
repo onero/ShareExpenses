@@ -1,4 +1,4 @@
-package dk.adamino.shareexpenses;
+package dk.adamino.shareexpenses.BLL;
 
 /**
  * Created by Adamino on 30-10-2016.
