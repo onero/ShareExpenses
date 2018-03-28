@@ -3,6 +3,8 @@ package dk.adamino.shareexpenses;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,14 +28,45 @@ public class ShareExpensesMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expense_calculator);
 
+        setupViews();
+
+        setupListeners();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_expense_calculator, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.clear) {
+            clearAll();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void clearAll() {
+        mIncomeA.setText("");
+        mIncomeB.setText("");
+        mTotalExpense.setText("");
+        mExpenseA.setText("");
+        mExpenseB.setText("");
+    }
+
+    private void setupViews() {
         mCalculateButton = findViewById(R.id.btnCalculate);
         mIncomeA = findViewById(R.id.incomeA);
         mExpenseA = findViewById(R.id.expenseA);
         mExpenseB = findViewById(R.id.expenseB);
         mIncomeB = findViewById(R.id.incomeB);
         mTotalExpense = findViewById(R.id.totalExpense);
+    }
 
-
+    private void setupListeners() {
         View.OnClickListener onCalculateClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
